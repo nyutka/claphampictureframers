@@ -1,0 +1,30 @@
+- name: Home
+  url: /
+  description: All starts here
+
+- name: About Us
+  url: /about
+  description: Why choose us
+  pills:
+  - name: Portfolio
+    url: /portfolio
+
+- name: Contact
+  description: Enquire here
+  url: /contact
+
+- name: Terms of Trading
+  description: The small print
+  url: /terms-of-trading
+
+- name: Fine Art Guild
+  description: Our trade association
+  url: /fine-art-guild/
+
+- name: Frames/Mirrors
+  url: /frames-and-mirrors
+  description: Any frame, any size
+
+- name: Get A Quote
+  description: Call us and ask
+  url: /quote/

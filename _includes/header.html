@@ -1,0 +1,33 @@
+{% include function-get-current-tab.html %}
+<header id="header">
+    <div class="container clearfix">
+        <div class="top-header text-center">0207 7208630 / 07846 956917 Monday 11am-6pm Tuesday- Saturday 10am-6pm</div>
+    	<a href="/" id="logo">
+    		<h1>Clapham Picture Framers</h1>
+    	</a>
+        <br>
+        <div class="main-header">
+        	<nav id="main-nav">
+        		
+        		<ul>
+        			{% for tab in site.data.tabs %}
+                        <li class="{% if currentTab.url == tab.url %}current{% endif %} {% if tab.pills %}dropdown{% endif %}">
+                            <a href="{{ tab.url | prepend: site.baseurl }}" data-description="{{ tab.description }}">{{ tab.name }}</a>
+                            {% if tab.pills %}
+                            <ul>
+                                {% for pill in tab.pills %}
+                                <li>
+                                    <a href="{{ pill.url | prepend: site.baseurl }}" data-description="{{ pill.description }}">{{ pill.name }}</a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+        		</ul>
+
+        	</nav><!-- end #main-nav -->
+        </div>
+    </div>
+	
+</header><!-- end #header -->
